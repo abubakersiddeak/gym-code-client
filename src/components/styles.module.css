@@ -1,0 +1,119 @@
+/* src/app/health/gym/gymComponents/styles.module.css */
+
+/* === SCROLL-TRIGGERED ANIMATIONS (For all sections EXCEPT Hero) === */
+
+/* Base class - hidden until triggered */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Active class - triggers animation on scroll */
+.fadeInUpActive {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === HERO SECTION ANIMATIONS (Load animations) === */
+
+/* Using a different name to avoid conflicts */
+.heroFadeInUp {
+  animation: heroFadeInUpAnimation 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes heroFadeInUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay1 {
+  animation-delay: 0.2s;
+}
+.delay2 {
+  animation-delay: 0.4s;
+}
+.delay3 {
+  animation-delay: 0.6s;
+}
+.delay4 {
+  animation-delay: 0.8s;
+}
+
+/* Float Animation (Wave Effect) for Hero Stats */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animateFloat {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* === SHARED ANIMATIONS === */
+
+/* Scroll Indicator */
+.scrollIndicator {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.scrollDot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 0.5;
+  }
+}
+
+/* Hover Effects */
+.hoverScale {
+  transition: transform 0.3s ease;
+}
+.hoverScale:hover {
+  transform: scale(1.05);
+}
+
+/* Gradient Text */
+.gradientText {
+  background: linear-gradient(135deg, #0090ff 0%, #52a8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

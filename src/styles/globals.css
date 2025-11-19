@@ -1,0 +1,157 @@
+/* src/globals.css */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Fonts */
+  --font-sans: system-ui, sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  /* Backgrounds */
+  --color-darkbg-1: #0a0a0a; 
+  --color-lightbg-1: #fafafa;
+
+  /* Gray */
+  --color-mest-gray-1: #1a1a1a;
+  --color-mest-gray-2: #1f1f1f;
+  --color-mest-gray-3: #292929;
+  --color-mest-gray-4: #2e2e2e;
+  --color-mest-gray-5: #454545;
+  --color-mest-gray-6: #878787;
+  --color-mest-gray-7: #8f8f8f;
+  --color-mest-gray-8: #7d7d7d;
+  --color-mest-gray-9: #a1a1a1;
+  --color-mest-gray-10: #ededed;
+
+  /* Gray Alpha */
+  --color-mest-gray-alpha-1: rgb(15, 15, 15);
+  --color-mest-gray-alpha-2: rgb(23, 23, 23);
+  --color-mest-gray-alpha-3: rgb(33, 33, 33);
+  --color-mest-gray-alpha-4: rgb(36, 36, 36);
+  --color-mest-gray-alpha-5: rgb(61, 61, 61);
+  --color-mest-gray-alpha-6: rgb(130, 130, 130);
+  --color-mest-gray-alpha-7: rgb(138, 138, 138);
+  --color-mest-gray-alpha-8: rgb(120, 120, 120);
+  --color-mest-gray-alpha-9: rgb(156, 156, 156);
+  --color-mest-gray-alpha-10: rgb(235, 235, 235);
+
+  /* Blue */
+  --color-mest-blue-1: #0f1c2e;
+  --color-mest-blue-2: #10233d;
+  --color-mest-blue-3: #0f2f57;
+  --color-mest-blue-4: #0d3868;
+  --color-mest-blue-5: #0a4380;
+  --color-mest-blue-6: #0090ff;
+  --color-mest-blue-7: #0072f5;
+  --color-mest-blue-8: #0062d1;
+  --color-mest-blue-9: #52a8ff;
+  --color-mest-blue-10: #ebf6ff;
+
+  /* Red */
+  --color-mest-red-1: #2a1314;
+  --color-mest-red-2: #3c1618;
+  --color-mest-red-3: #561a1e;
+  --color-mest-red-4: #671e21;
+  --color-mest-red-5: #832126;
+  --color-mest-red-6: #e5484d;
+  --color-mest-red-7: #eb555a;
+  --color-mest-red-8: #d93036;
+  --color-mest-red-9: #ff6166;
+  --color-mest-red-10: #feecee;
+
+  /* Amber */
+  --color-mest-amber-1: #291800;
+  --color-mest-amber-2: #331b00;
+  --color-mest-amber-3: #4d2a00;
+  --color-mest-amber-4: #573300;
+  --color-mest-amber-5: #6b4105;
+  --color-mest-amber-6: #e79d13;
+  --color-mest-amber-7: #ffb224;
+  --color-mest-amber-8: #ff990a;
+  --color-mest-amber-9: #f2a20d;
+  --color-mest-amber-10: #fef3dc;
+
+  /* Green */
+  --color-mest-green-1: #0b2212;
+  --color-mest-green-2: #0f2e18;
+  --color-mest-green-3: #12361b;
+  --color-mest-green-4: #0c451b;
+  --color-mest-green-5: #126426;
+  --color-mest-green-6: #1a9338;
+  --color-mest-green-7: #45a557;
+  --color-mest-green-8: #398e4a;
+  --color-mest-green-9: #62c073;
+  --color-mest-green-10: #e5fbea;
+
+  /* Teal */
+  --color-mest-teal-1: #04201b;
+  --color-mest-teal-2: #062822;
+  --color-mest-teal-3: #083a33;
+  --color-mest-teal-4: #053d35;
+  --color-mest-teal-5: #085e53;
+  --color-mest-teal-6: #0c9784;
+  --color-mest-teal-7: #12a594;
+  --color-mest-teal-8: #0d8c7d;
+  --color-mest-teal-9: #0ac7b4;
+  --color-mest-teal-10: #e0faf4;
+
+  /* Purple */
+  --color-mest-purple-1: #231528;
+  --color-mest-purple-2: #2e1938;
+  --color-mest-purple-3: #422154;
+  --color-mest-purple-4: #4f2768;
+  --color-mest-purple-5: #5f2e85;
+  --color-mest-purple-6: #8e4ec6;
+  --color-mest-purple-7: #9658cd;
+  --color-mest-purple-8: #763da9;
+  --color-mest-purple-9: #bf7af0;
+  --color-mest-purple-10: #f8edfc;
+
+  /* Pink */
+  --color-mest-pink-1: #28151d;
+  --color-mest-pink-2: #3a1726;
+  --color-mest-pink-3: #4f1c31;
+  --color-mest-pink-4: #551b33;
+  --color-mest-pink-5: #6c1e3e;
+  --color-mest-pink-6: #b31957;
+  --color-mest-pink-7: #ea3e83;
+  --color-mest-pink-8: #df2670;
+  --color-mest-pink-9: #f75f8f;
+  --color-mest-pink-10: #feecf4;
+  
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@layer base {
+  * {
+    @apply border-mest-gray-alpha-3;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-lightbg-1 text-mest-gray-1 dark:bg-darkbg-1 dark:text-mest-gray-10;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  
+}
+
+
