@@ -1,10 +1,9 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-  Menu, 
+  Menu,
   X,
   Dumbbell,
   Moon,
@@ -107,7 +106,7 @@ export default function Navbar() {
                 </Link>
               );
             })}
-          </div> 
+          </div>
 
           {/* Actions */}
           <div className="flex items-center gap-2">
@@ -146,7 +145,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          className={`lg:hidden overflow-hidden backdrop-blur-sm bg-black/70 rounded-2xl transition-all duration-300 ${
             isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
